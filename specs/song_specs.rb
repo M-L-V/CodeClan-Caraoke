@@ -21,10 +21,15 @@ def setup
   @song4 = Song.new("Sunflower")
 
   @guest1 = Guest.new("Lily")
-  @guest1 = Guest.new("Claudia")
-  @guest1 = Guest.new("Simon")
+  @guest2 = Guest.new("Claudia")
+  @guest3 = Guest.new("Simon")
 
 
+end
+
+
+def test_song_name
+  assert_equal("Yoga", @song2.name)
 end
 
 

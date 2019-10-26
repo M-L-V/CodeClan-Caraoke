@@ -1,12 +1,12 @@
 class Guest
 
-attr_reader :name, :age
+attr_reader :name
 
-  def initialize(name, age)
+  def initialize(name)
 
     @name = name
-    @age = age
+
 
   end
 
-end 
+end

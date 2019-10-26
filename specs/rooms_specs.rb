@@ -21,11 +21,22 @@ def setup
   @song4 = Song.new("Sunflower")
 
   @guest1 = Guest.new("Lily")
-  @guest1 = Guest.new("Claudia")
-  @guest1 = Guest.new("Simon")
+  @guest2 = Guest.new("Claudia")
+  @guest3 = Guest.new("Simon")
 
 
 end
+
+
+def test_room_name
+  assert_equal("Red", @room1.name)
+end
+
+def test_room_number_of_guests
+  assert_equal(2, @room2.number_of_guests)
+end
+
+
 
 
 
