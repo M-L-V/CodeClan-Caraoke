@@ -37,7 +37,12 @@ end
 
 def test_room_number_of_songs
   assert_equal(2, @room3.number_of_songs)
-end 
+end
+
+def test_remove_song_from_room
+  @room3.remove_song_from_room 
+  assert_equal(1, @room3.number_of_songs)
+end
 
 
 

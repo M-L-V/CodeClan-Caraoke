@@ -17,7 +17,11 @@ attr_reader :name, :number_of_guests, :list_of_songs
 
   def number_of_songs
     return @list_of_songs.size
-  end 
+  end
+
+  def remove_song_from_room
+    return @list_of_songs.pop
+  end
 
 
 
