@@ -9,12 +9,6 @@ class TestRooms < Minitest::Test
 
 def setup
 
-
-  @room1 = Room.new("Red", 3, 1)
-  @room2 = Room.new("Black", 2, 1)
-  @room3 = Room.new("Purple", 2, 1)
-
-
   @song1 = Song.new("Immigrant Song")
   @song2 = Song.new("Yoga")
   @song3 = Song.new("All the Stars")
@@ -23,6 +17,11 @@ def setup
   @guest1 = Guest.new("Lily")
   @guest2 = Guest.new("Claudia")
   @guest3 = Guest.new("Simon")
+
+  @room1 = Room.new("Red", [], [])
+  @room2 = Room.new("Black", [@guest1, @guest2, @guest3], [@song1, @song3])
+  @room3 = Room.new("Purple", [], [@song2, @song4])
+
 
 
 end
@@ -33,8 +32,14 @@ def test_room_name
 end
 
 def test_room_number_of_guests
-  assert_equal(2, @room2.number_of_guests)
+  assert_equal(3, @room2.number_of_guests)
 end
+
+def test_room_number_of_songs
+  assert_equal(2, @room3.number_of_songs)
+end 
+
+
 
 
 
