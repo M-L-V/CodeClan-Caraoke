@@ -23,6 +23,19 @@ attr_reader :name, :number_of_guests, :list_of_songs
     return @list_of_songs.pop
   end
 
+  def add_song_to_room(song)
+    @list_of_songs.push song
+  end
+
+
+  def add_guest_to_room(guest)
+    @number_of_guests.push guest
+  end
+
+
+  # def remove_guest_from_room(guest)
+  #       delete_if guest == guest
+
 
 
 
