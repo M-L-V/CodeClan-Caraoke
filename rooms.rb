@@ -32,9 +32,15 @@ attr_reader :name, :number_of_guests, :list_of_songs
     @number_of_guests.push guest
   end
 
+  # 
+  # def remove_guest_from_room_by_name(room, guest)
+  #     for guest in @rooms.@number_of_guests
+  #       if guest[:name] == name
+  #         guest.delete
+  #       end
+  #     end
+  # end
 
-  # def remove_guest_from_room(guest)
-  #       delete_if guest == guest
 
 
 

@@ -19,11 +19,14 @@ def setup
   @guest2 = Guest.new("Claudia")
   @guest3 = Guest.new("Simon")
 
+  @guests = [@guest1, @guest2, @guest3]
+
+
   @room1 = Room.new("Red", [], [])
   @room2 = Room.new("Black", [@guest1, @guest2, @guest3], [@song1, @song3]) #remove songs so there is one per room
   @room3 = Room.new("Purple", [], [@song2, @song4])
 
-
+  @rooms = [@room1, @room2, @room3]
 
 end
 
@@ -59,13 +62,9 @@ def test_add_guest_to_room
 end
 
 
-
-
-
-#
-# def test_remove_guest_from_room(guest)
-#guest = "Molly"
-#   @room2.remove_guest_from_room
+# def test_remove_guest_from_room_by_name
+#   guest = @guest2
+#   @room2.remove_guest_from_room_by_name(guest, name)
 #   assert_equal(3, @room2.number_of_guests)
 # end
 
